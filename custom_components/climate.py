@@ -8,7 +8,7 @@ from datetime import timedelta, datetime
 import voluptuous as vol 
 from typing import Any
 
-from . hajolly import ( 
+from .jollymec.hajolly import ( 
     ConnectionError,
     Error as JollyMecError,
     UnauthorizedError,
