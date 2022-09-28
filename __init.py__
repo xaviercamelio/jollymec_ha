@@ -1,0 +1,35 @@
+import logging
+#from homeassistant.const import EVENT_HOMEASSISTANT_START, EVENT_HOMEASSISTANT_STOP
+import homeassistant.helpers.config_validation as cv
+import voluptuous as vol
+from . import hajolly 
+
+
+_LOGGER = logging.getLogger(__name__)
+
+DOMAIN = "jollymec_test"
+
+CONF_USERNAME = "username"
+CONF_PASSWORD = "password"
+CONF_ID = "id"
+
+
+
+CONFIG_SCHEMA = vol.Schema(
+	{
+		DOMAIN: vol.Schema({
+			vol.Optional(CONF_USERNAME): cv.string,
+			vol.Optional(CONF_PASSWORD): cv.string,
+			vol.Optional(CONF_ID): cv.string,
+		})
+	},
+	extra=vol.ALLOW_EXTRA,
+)
+
+
+
+def setup(hass, config):
+	username = config[CONF_USERNAME]
+	password = config[CONF_PASSWORD]
+	heaterid = config[CONF_ID]
+	unique_id = config[CONF_UNIQUE_ID]

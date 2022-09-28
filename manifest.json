@@ -1,0 +1,10 @@
+{
+  "domain": "jollymec_test",
+  "name": "jollymec_test",
+  "documentation": "https://github.com/xaviercamelio/jollymec/",
+  "version": "0.0.1",
+  "dependencies": [],
+  "requirements": ["requests"],
+  "codeowners": ["@xaviercamelio"],
+  "iot_class": "local_polling"
+}
