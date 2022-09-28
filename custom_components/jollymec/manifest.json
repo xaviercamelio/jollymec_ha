@@ -1,7 +1,7 @@
 {
-  "domain": "jollymec_test",
-  "name": "jollymec_test",
-  "documentation": "https://github.com/xaviercamelio/jollymec/",
+  "domain": "jollymec",
+  "name": "jollymec",
+  "documentation": "https://github.com/xaviercamelio/jollymec_ha/",
   "version": "0.0.1",
   "dependencies": [],
   "requirements": ["requests"],
