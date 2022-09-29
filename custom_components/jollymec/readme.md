@@ -4,7 +4,7 @@ This project was create to integrate the control of the jollymec pellet in Home 
 # How to install 
 You have to add this repository in HACS.
 In your configuration.yaml:
-'''
+''''
 climate:
   - platform: "jollymec"
     name: "poele"
@@ -27,7 +27,7 @@ climate:
     sleep_pw: 1
     activity_temp: 20
     activity_pw: 2
-'''
+''''
 mode_temp: 20 indicate the mode and the temperature
 mode_pw: 1 indicate the mode and the power from [0-5]
 
