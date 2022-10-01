@@ -2,7 +2,7 @@
   "domain": "jollymec",
   "name": "jollymec",
   "documentation": "https://github.com/xaviercamelio/jollymec_ha/",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": [],
   "requirements": ["requests"],
   "codeowners": ["@xaviercamelio"],
