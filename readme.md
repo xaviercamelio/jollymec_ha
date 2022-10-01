@@ -34,8 +34,8 @@ mode_temp: 20 indicate the mode and the temperature
 mode_pw: 1 indicate the mode and the power from [0-5]
 
 # How to use
-I have install thermostat_simple to visualize the preset mode and control the temperature
-I have also install the darkmod thermostat 
+I have install [thermostat_simple](https://github.com/dadge/simple_thermostat) to visualize the preset mode and control the temperature
+I have also install the [darkmod thermostat](https://github.com/ciotlosm/lovelace-thermostat-dark-card) 
 
 # Caveat
 The control of the stove is using the website. There is everyday an interuption at 2h47. 
