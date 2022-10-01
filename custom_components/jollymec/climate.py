@@ -137,6 +137,7 @@ async def async_setup_platform(hass, config, async_add_entities,  discovery_info
     username = config.get(CONF_USERNAME)
     password = config.get(CONF_PASSWORD)
     heater_id = config.get(CONF_ID)
+    unique_id = config.get(CONF_UNIQUE_ID)
     name = config.get(CONF_NAME)
     heater_entity_id = config.get(CONF_HEATER),
     sensor_entity_id = config.get(CONF_SENSOR),
@@ -161,6 +162,8 @@ async def async_setup_platform(hass, config, async_add_entities,  discovery_info
         device,
         heater_entity_id,
         sensor_entity_id,
+        unique_id, 
+        device, 
         min_temp,
         max_temp,
         target_temp,
@@ -187,6 +190,7 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
         target_temp,
         initial_hvac_mode,
         ac_mode,
+        min_cycle_duration,
         presets,
         fans,
         ):
@@ -194,6 +198,8 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
         
         """Initialize the thermostat."""
         self._name = name
+        self.heater_entity_id = heater_entity_id
+        self.sensor_entity_id = sensor_entity_id
         self._attr_name = name
         self._heater_id = heater_id
         self._unique_id = unique_id 
@@ -310,7 +316,7 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
     @property
     def unique_id(self):
         """Return the unit of measurement."""
-        return self._heater_id
+        return self._unique_id
 
     @property
     def name(self):
