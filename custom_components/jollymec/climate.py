@@ -138,6 +138,8 @@ async def async_setup_platform(hass, config, async_add_entities,  discovery_info
     password = config.get(CONF_PASSWORD)
     heater_id = config.get(CONF_ID)
     name = config.get(CONF_NAME)
+    heater_entity_id = config.get(CONF_HEATER),
+    sensor_entity_id = config.get(CONF_SENSOR),
     min_temp = config.get(CONF_MIN_TEMP)
     max_temp = config.get(CONF_MAX_TEMP)
     target_temp = config.get(CONF_TARGET_TEMP)
@@ -156,7 +158,9 @@ async def async_setup_platform(hass, config, async_add_entities,  discovery_info
     async_add_entities([JollyMecDevice(
         name,
         heater_id,
-        device, 
+        device,
+        heater_entity_id,
+        sensor_entity_id,
         min_temp,
         max_temp,
         target_temp,
@@ -174,6 +178,8 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
         self, 
         name,
         heater_id,
+        heater_entity_id,
+        sensor_entity_id,
         unique_id,
         device,
         min_temp,
