@@ -38,7 +38,7 @@ I have install [thermostat_simple](https://github.com/dadge/simple_thermostat) t
 I have also install the [darkmod thermostat](https://github.com/ciotlosm/lovelace-thermostat-dark-card) 
 
 # Caveat
-The control of the stove is using the website. There is everyday an interuption at 2h47. 
+The control of the stove is using the website. There is everyday a breakdown at 2h47. 
 There can have some stability issue.
 
 # Roadmap
