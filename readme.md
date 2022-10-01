@@ -1,10 +1,9 @@
 # About
-This project was create to integrate the control of the jollymec pellets stove in Home Assistant and be included into automation for example. It is not a thermostat, just control. The thermostat is realized locally between the remote and the stove.
+This project was create to integrate the control of the jollymec pellet in Home Assistant and be included into automation for example. It is not a thermostat, just control. The thermostat is realized between the remote and the stove.
 
 # How to install 
-You have to add this repository in HACS in custom repository (dépôts personnalisés) and choose Integration.
-
-In your `configuration.yaml`:
+You have to add this repository in HACS.
+In your configuration.yaml:
 ```
 climate:
   - platform: "jollymec"
@@ -34,11 +33,11 @@ mode_temp: 20 indicate the mode and the temperature
 mode_pw: 1 indicate the mode and the power from [0-5]
 
 # How to use
-I have install [thermostat_simple](https://github.com/dadge/simple_thermostat) to visualize the preset mode and control the temperature
-I have also install the [darkmod thermostat](https://github.com/ciotlosm/lovelace-thermostat-dark-card) 
+I have install thermostat_simple to visualize the preset mode and control the temperature
+I have also install the darkmod thermostat 
 
 # Caveat
-The control of the stove is using the website. There is everyday a breakdown at 2h47. 
+The control of the stove is using the website. There is everyday an interuption at 2h47. 
 There can have some stability issue.
 
 # Roadmap
