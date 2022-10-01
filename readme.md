@@ -39,3 +39,8 @@ I have also install the darkmod thermostat
 # Caveat
 The control of the stove is using the website. There is everyday an interuption at 2h47. 
 There can have some stability issue.
+
+# Roadmap
+Integrate config_flow to create unique_id for the entity and make configuration more user-friendly.
+
+
