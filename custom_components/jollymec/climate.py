@@ -180,7 +180,6 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
     def __init__(
         self, 
         name,
-        heater_id,
         heater_entity_id,
         sensor_entity_id,
         unique_id,
@@ -201,7 +200,6 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
         self.heater_entity_id = heater_entity_id
         self.sensor_entity_id = sensor_entity_id
         self._attr_name = name
-        self._heater_id = heater_id
         self._unique_id = unique_id 
         self._attr_unique_id = unique_id 
         self._device = device
