@@ -128,13 +128,12 @@ class jollymec(object):
     """Provides access to jollymec platform."""
 
 
-    def __init__(self, email, password, heater_id, unique_id):
+    def __init__(self, email, password, heater_id):
         """jollymec_cls object constructor"""
 
         self.email = email 
         self.password = password 
         self.heater_id = heater_id
-        self.unique_id = unique_id
         self.devices = list()
         self._fetch_data()
 

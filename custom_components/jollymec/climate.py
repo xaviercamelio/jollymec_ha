@@ -150,7 +150,7 @@ async def async_setup_platform(hass, config, async_add_entities,  discovery_info
         key: config[value] for key, value in CONF_FAN.items() if value in config
     }
     
-    jolly = await  hass.async_add_executor_job(jollymec, username, password, heater_id, unique_id)
+    jolly = await  hass.async_add_executor_job(jollymec, username, password, heater_id)
     device = jolly.devices[0]
 
     async_add_entities([JollyMecDevice(
