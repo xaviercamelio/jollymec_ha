@@ -7,7 +7,7 @@ from . import hajolly
 
 _LOGGER = logging.getLogger(__name__)
 
-DOMAIN = "jollymec_test"
+DOMAIN = "jollymec"
 
 CONF_USERNAME = "username"
 CONF_PASSWORD = "password"
@@ -18,9 +18,10 @@ CONF_ID = "id"
 CONFIG_SCHEMA = vol.Schema(
 	{
 		DOMAIN: vol.Schema({
-			vol.Optional(CONF_USERNAME): cv.string,
-			vol.Optional(CONF_PASSWORD): cv.string,
-			vol.Optional(CONF_ID): cv.string,
+			vol.Required(CONF_USERNAME): cv.string,
+			vol.Required(CONF_PASSWORD): cv.string,
+			vol.Required(CONF_ID): cv.string,
+			vol.Optional(CONF_UNIQUE_ID)
 		})
 	},
 	extra=vol.ALLOW_EXTRA,
@@ -33,3 +34,5 @@ def setup(hass, config):
 	password = config[CONF_PASSWORD]
 	heaterid = config[CONF_ID]
 	unique_id = config[CONF_UNIQUE_ID]
+
+	return True
