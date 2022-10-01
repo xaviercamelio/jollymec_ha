@@ -4,7 +4,7 @@ This project was create to integrate the control of the jollymec pellet in Home 
 # How to install 
 You have to add this repository in HACS in custom repository (dépôts personnalisés) and choose Integration.
 
-In your <configuration.yaml>:
+In your `configuration.yaml`:
 ```
 climate:
   - platform: "jollymec"
