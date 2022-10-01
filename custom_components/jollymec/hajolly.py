@@ -134,6 +134,7 @@ class jollymec(object):
         self.email = email 
         self.password = password 
         self.heater_id = heater_id
+        self.unique_id = unique_id
         self.devices = list()
         self._fetch_data()
 
