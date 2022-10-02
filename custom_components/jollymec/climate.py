@@ -157,7 +157,8 @@ async def async_setup_platform(hass, config, async_add_entities,  discovery_info
 
     async_add_entities([JollyMecDevice(
         name,
-        unique_id, 
+        unique_id,
+        heater_id, 
         device, 
         min_temp,
         max_temp,
@@ -176,6 +177,7 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
         self, 
         name, 
         unique_id,
+        heater_id,
         device,
         min_temp,
         max_temp,
@@ -206,6 +208,7 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
         self._temp_lock = asyncio.Lock()
         self._hvac_mode = initial_hvac_mode
         self._attr_preset_mode = PRESET_NONE
+        self._heater_id= heater_id
         self._active = False
         self._cur_temp = None
         self._target_temp = target_temp
@@ -299,7 +302,7 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
     @property
     def unique_id(self):
         """Return the unit of measurement."""
-        return self._unique_id
+        return self._heater_id
 
     @property
     def name(self):
