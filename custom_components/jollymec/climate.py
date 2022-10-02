@@ -140,8 +140,6 @@ async def async_setup_platform(hass, config, async_add_entities,  discovery_info
     heater_id = config.get(CONF_ID)
     unique_id = config.get(CONF_UNIQUE_ID)
     name = config.get(CONF_NAME)
-    heater_entity_id = config.get(CONF_HEATER),
-    sensor_entity_id = config.get(CONF_SENSOR),
     min_temp = config.get(CONF_MIN_TEMP)
     max_temp = config.get(CONF_MAX_TEMP)
     target_temp = config.get(CONF_TARGET_TEMP)
@@ -159,8 +157,6 @@ async def async_setup_platform(hass, config, async_add_entities,  discovery_info
 
     async_add_entities([JollyMecDevice(
         name,
-        heater_entity_id,
-        sensor_entity_id,
         unique_id, 
         device, 
         min_temp,
@@ -179,8 +175,6 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
     def __init__(
         self, 
         name, 
-        heater_entity_id,
-        sensor_entity_id,
         unique_id,
         device,
         min_temp,
@@ -196,8 +190,6 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
         
         """Initialize the thermostat."""
         self._name = name
-        self.heater_entity_id = heater_entity_id
-        self.sensor_entity_id = sensor_entity_id
         self._attr_name = name
         self._unique_id = unique_id 
         self._attr_unique_id = unique_id 
@@ -237,25 +229,6 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
     async def async_added_to_hass(self):
         """Run when entity about to be added."""
         await super().async_added_to_hass()
-
-        # Add listener
-        # self.async_on_remove(
-        #     async_track_state_change_event(
-        #         self.hass, [self.sensor_entity_id], self._async_sensor_changed
-        #     )
-        # )
-        # self.async_on_remove(
-        #     async_track_state_change_event(
-        #         self.hass, [self.heater_entity_id], self._async_switch_changed
-        #     )
-        # )
-
-        # if self._keep_alive:
-        #     self.async_on_remove(
-        #         async_track_time_interval(
-        #             self.hass, self._async_control_heating, self._keep_alive
-        #         )
-        #     )
 
         @callback
         def _async_startup(*_):
