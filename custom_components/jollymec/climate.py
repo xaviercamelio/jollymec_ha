@@ -1,10 +1,7 @@
 """Support for Jollymec heating devices."""
 import asyncio
 import logging
-import os.path
-import sys
-import time
-from datetime import timedelta, datetime 
+from datetime import timedelta
 import voluptuous as vol 
 from typing import Any
 

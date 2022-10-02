@@ -3,11 +3,9 @@ the IOT Agua platform of Micronova
 """
 from os import ST_APPEND
 import sys
-from uuid import RESERVED_FUTURE
 import requests
 import json
 import asyncio
-import aiohttp
 import os.path
 import pickle
 import time
