@@ -115,7 +115,6 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Optional(CONF_SENSOR): cv.entity_id,
     vol.Optional(CONF_ID): cv.string,
     vol.Optional(CONF_PASSWORD): cv.string,
-    vol.Optional(CONF_UNIQUE_ID): cv.string,
     vol.Optional(CONF_USERNAME): cv.string,
     vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
     vol.Optional(CONF_AC_MODE): cv.boolean,

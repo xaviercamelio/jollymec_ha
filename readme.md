@@ -11,7 +11,6 @@ climate:
     username: "mail" 
     password: "yourpassword" 
     id: "MAC_ADRESS_IN-UPPERCASE"
-    unique_id: "created uiid v4 from website"
     target_temp: 19
     away_temp: 14
     away_pw: 1
