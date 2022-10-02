@@ -1,5 +1,5 @@
 # About
-This project was create to integrate the control of the jollymec pellet in Home Assistant and be included into automation for example. It is not a thermostat, just control. The thermostat is realized between the remote and the stove.
+This project was created to integrate the control of the jollymec pellet in Home Assistant and be included into automation for example. It is not a thermostat, just control. The thermostat is realized between the remote and the stove.
 
 # How to install 
 You have to add this repository in HACS.
