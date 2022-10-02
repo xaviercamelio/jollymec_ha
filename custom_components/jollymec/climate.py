@@ -47,6 +47,7 @@ from homeassistant.components.climate.const import (
     PRESET_HOME,
     PRESET_SLEEP,
     PRESET_ACTIVITY,
+    FAN_OFF,
     CURRENT_HVAC_HEAT,
     CURRENT_HVAC_IDLE,
     CURRENT_HVAC_OFF,
@@ -226,9 +227,9 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
         self._presets = presets
         if len(fans):
             self._attr_supported_features |= ClimateEntityFeature.FAN_MODE
-            self._attr_fan_modes = [FAN_NONE] + list(fans.keys())
+            self._attr_fan_modes = [FAN_OFF] + list(fans.keys())
         else:
-            self._attr_fan_modes = [FAN_NONE]
+            self._attr_fan_modes = [FAN_OFF]
         self._fans = fans
         self._attributes = {}
         
