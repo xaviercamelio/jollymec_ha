@@ -225,10 +225,10 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
             self._attr_preset_modes = [PRESET_NONE]
         self._presets = presets
         if len(fans):
-            self._attr_supported_features |= ClimateEntityFeature.PRESET_MODE
-            self._attr_fan_modes = [PRESET_NONE] + list(fans.keys())
+            self._attr_supported_features |= ClimateEntityFeature.FAN_MODE
+            self._attr_fan_modes = [FAN_NONE] + list(fans.keys())
         else:
-            self._attr_fan_modes = [PRESET_NONE]
+            self._attr_fan_modes = [FAN_NONE]
         self._fans = fans
         self._attributes = {}
         
