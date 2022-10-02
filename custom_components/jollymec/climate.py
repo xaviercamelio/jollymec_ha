@@ -304,10 +304,6 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
         # Set default state to off
         if not self._hvac_mode:
             self._hvac_mode = HVACMode.OFF
-    # @property
-    # def should_poll(self):
-    #     """Return the polling state."""
-    #     return False
 
     @property
     def supported_features(self):
@@ -373,7 +369,7 @@ class JollyMecDevice(ClimateEntity, RestoreEntity) :
     def fan_modes(self):
         """Return the list of available fan modes."""
         fan_modes = []
-        for x in range(1,5):
+        for x in range(0,5):
             fan_modes.append(str(x))
         return fan_modes
         
