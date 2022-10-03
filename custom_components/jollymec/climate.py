@@ -108,11 +108,11 @@ CONF_PRECISION = "precision"
 CONF_TEMP_STEP = "target_temp_step"
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
-    vol.Required(CONF_HEATER): cv.entity_id,
+    vol.Optional(CONF_HEATER): cv.entity_id,
     vol.Optional(CONF_SENSOR): cv.entity_id,
     vol.Optional(CONF_ID): cv.string,
-    vol.Optional(CONF_PASSWORD): cv.string,
-    vol.Optional(CONF_USERNAME): cv.string,
+    vol.Required(CONF_PASSWORD): cv.string,
+    vol.Required(CONF_USERNAME): cv.string,
     vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
     vol.Optional(CONF_AC_MODE): cv.boolean,
     vol.Optional(CONF_MAX_TEMP): vol.Coerce(float),
