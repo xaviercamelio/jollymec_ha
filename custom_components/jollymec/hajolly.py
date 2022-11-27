@@ -245,7 +245,7 @@ class Device(object):
         
     def turn_on(self):
         _LOGGER.debug("allumage du poele")
-        #command_jollymec('heater-on','1', self._jollymec.heater_id)
+        command_jollymec('heater-on','1', self._jollymec.heater_id)
         return True
  
     def turn_off(self):
